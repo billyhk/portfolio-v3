@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { useApplicationContext } from "../../state/contexts/ApplicationContext";
+import './nav.scss';
 
 const MainNav = () => {
 
   const { state: { links } } = useApplicationContext()
 
   return (
-    <nav>
+    <nav className="main-nav">
       {links.filter((l) => l.showInNav)
         .map((l) => (
           <NavLink

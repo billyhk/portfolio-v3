@@ -18,6 +18,34 @@ const initialState: ApplicationState = {
       showInNav: true,
       component: () => <Home />,
     },
+    {
+      id: "experience",
+      to: "/",
+      name: "Experience",
+      showInNav: true,
+      component: () => <Home />,
+    },
+    {
+      id: "projects",
+      to: "/",
+      name: "Projects",
+      showInNav: true,
+      component: () => <Home />,
+    },
+    {
+      id: "skills",
+      to: "/",
+      name: "Skills",
+      showInNav: true,
+      component: () => <Home />,
+    },
+    {
+      id: "contact",
+      to: "/",
+      name: "Contact",
+      showInNav: true,
+      component: () => <Home />,
+    },
   ]
 }
 
