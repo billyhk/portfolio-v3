@@ -8,7 +8,7 @@ export type ApplicationProviderProps = {
 };
 
 const initialState: ApplicationState = {
-  isMenuOpen: true,
+  isMenuOpen: false,
   pageHeader: "",
   links: [
     {
@@ -20,28 +20,28 @@ const initialState: ApplicationState = {
     },
     {
       id: "experience",
-      to: "/",
+      to: "/experience",
       name: "Experience",
       showInNav: true,
       component: () => <Home />,
     },
     {
       id: "projects",
-      to: "/",
+      to: "/projects",
       name: "Projects",
       showInNav: true,
       component: () => <Home />,
     },
     {
       id: "skills",
-      to: "/",
+      to: "/skills",
       name: "Skills",
       showInNav: true,
       component: () => <Home />,
     },
     {
       id: "contact",
-      to: "/",
+      to: "/contact",
       name: "Contact",
       showInNav: true,
       component: () => <Home />,
