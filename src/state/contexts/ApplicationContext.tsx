@@ -1,5 +1,6 @@
 import React, { createContext, FC, useContext, useReducer } from "react";
 import { ApplicationState } from "../../interfaces/state";
+import { Home } from "../../pages";
 import applicationReducer, { ApplicationActions } from "../reducers/application";
 
 export type ApplicationProviderProps = {
@@ -9,6 +10,15 @@ export type ApplicationProviderProps = {
 const initialState: ApplicationState = {
   isMenuOpen: true,
   pageHeader: "",
+  links: [
+    {
+      id: "home",
+      to: "/",
+      name: "Home",
+      showInNav: false,
+      component: () => <Home />,
+    },
+  ]
 }
 
 // create context
