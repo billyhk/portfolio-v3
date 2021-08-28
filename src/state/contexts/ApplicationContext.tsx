@@ -15,7 +15,7 @@ const initialState: ApplicationState = {
       id: "home",
       to: "/",
       name: "Home",
-      showInNav: false,
+      showInNav: true,
       component: () => <Home />,
     },
   ]

@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { RouteComponentProps, Switch, withRouter } from 'react-router-dom';
 import { useScrollToTopOnNav } from './hooks/useScrolltoTopOnNav';
 import { useApplicationContext } from './state/contexts/ApplicationContext';
 import { ILink } from './interfaces/link';
 import RouteHandler from './components/Route/RouteHandler';
+import { MainNav } from './components/Nav';
 
 const App: React.FC<RouteComponentProps> = () => {
   useScrollToTopOnNav();
@@ -14,9 +15,8 @@ const App: React.FC<RouteComponentProps> = () => {
   } = useApplicationContext()
 
   return (
-    <>
-      {/* nav bar */}
-
+    <div className="site-container">
+      <MainNav />
       <Switch>
         {links.map((l: ILink) => {
           return (
@@ -29,7 +29,7 @@ const App: React.FC<RouteComponentProps> = () => {
           );
         })}
       </Switch>
-    </>
+    </div>
   );
 }
 
