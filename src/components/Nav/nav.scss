@@ -2,14 +2,6 @@
 //   display: grid;
 // }
 
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-}
-
 // mobile-first container 😁 iphone 6 size
 .widget-container {
   width: 375px;
@@ -82,6 +74,8 @@ $color--blue: #25516d;
   // Don't want pointer-events as menu is closed... but why?
   pointer-events: none;
   transition: $transition-duration;
+        z-index: 1;
+
 }
 
 // Showing nav items as lines, making up the menu icon
@@ -101,8 +95,9 @@ $color--blue: #25516d;
   line-height: 7px;
   white-space: nowrap;
   transform: scaleY(0.2);
-  transition: $transition-duration, opacity 0.1s;
 
+  transition: $transition-duration, opacity 0.1s;
+  
   // Setting delays for the nav items in close transition
   @for $i from 1 through $items {
     &:nth-child(#{$i}) {
@@ -120,7 +115,7 @@ $color--blue: #25516d;
     content: '';
     top: 50%;
     left: 0;
-    width: 100%;
+    width: 1000%;
     height: 2.5px;
     background-color: $color--blue;
     transform: translateY(-50%) scaleY(5);

@@ -1,6 +1,6 @@
 import React, { createContext, FC, useContext, useReducer } from "react";
 import { ApplicationState } from "../../interfaces/state";
-import { Home } from "../../pages";
+import { Home, Contact, Experience, Projects, Skills } from "../../pages";
 import applicationReducer, { ApplicationActions } from "../reducers/application";
 
 export type ApplicationProviderProps = {
@@ -23,28 +23,28 @@ const initialState: ApplicationState = {
       to: "/experience",
       name: "Experience",
       showInNav: true,
-      component: () => <Home />,
+      component: () => <Experience />,
     },
     {
       id: "projects",
       to: "/projects",
       name: "Projects",
       showInNav: true,
-      component: () => <Home />,
+      component: () => <Projects />,
     },
     {
       id: "skills",
       to: "/skills",
       name: "Skills",
       showInNav: true,
-      component: () => <Home />,
+      component: () => <Skills />,
     },
     {
       id: "contact",
       to: "/contact",
       name: "Contact",
       showInNav: true,
-      component: () => <Home />,
+      component: () => <Contact />,
     },
   ]
 }

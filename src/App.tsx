@@ -17,6 +17,8 @@ const App: React.FC<RouteComponentProps> = () => {
   return (
     <div className="site-container">
       <MainNav />
+      <main className="component-content">
+      </main>
       <Switch>
         {links.map((l: ILink) => {
           return (
