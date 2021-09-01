@@ -1,63 +1,64 @@
 import * as React from "react";
 import { motion, useMotionValue } from 'framer-motion';
+import { randomInRange } from "../../utils/randomInRange";
 
-const svgVariants = {
+const skyVariants = {
   hidden: {
-    opacity: 0
+    fill: "#afe"
   },
   visible: {
-    transition: { duration: 1 }
+    fill: ["#AAFFEE", "#1CF", "#fffbbb", "#9Fa", "#00B893"],
+  }
+}
+
+const skyTransition = {
+  default: {
+    repeatDelay: 2.5,
+    duration: 10,
+    ease: "easeInOut",
+    repeat: Infinity,
+    repeatType: "reverse"
   }
 }
 
 const pathVariants = {
   hidden: {
-    // opacity: .5,
     pathLength: 0,
-    // fill: "rgba(255, 255, 255, 0)"
-    scale: 2
+    scale: 1.1
   },
   visible: {
-    // opacity: 1,
     pathLength: 1,
     scale: 1,
-    // fill: "rgba(100, 123, 123, 1)"
   },
 }
 
 const transition = {
-  default: {
-    duration: 2.5,
-    ease: [1, 0, .25, 1],
-    // loop: Infinity,
-    // repeatType: "mirror"
+  scale: {
+    delay: 2,
+    repeatDelay: 1,
+    duration: 15,
+    ease: "easeInOut",
+    repeat: Infinity,
+    repeatType: "reverse"
   },
-  // fill: {
-  //   delay: 1,
-  //   duration: 2,
-  //   type: "spring",
-  //   ease: "easeInOut",
-  //   loop: Infinity,
-  //   repeatType: "mirror"
-  // },
-  // pathLength: {
-  //   ease: [1, 0, .25, 1],
-  //   loop: Infinity,
-  //   duration: 3,
-  //   repeatType: "reverse"
-  // }
+  pathLength: {
+    repeatDelay: 2,
+    duration: 7.5,
+    ease: "easeInOut",
+    repeat: Infinity,
+    repeatType: "reverse"
+  }
 }
 
+
+
 export const WoodsyScene1 = () => {
-  const pathLength = useMotionValue(0)
+  // const pathLength = useMotionValue(0)
   // dispatch global state setHasLoaded(true)
   // use ternary statement to return value for motion.path attributes transition and initial
 
   return (
     <motion.svg
-      // initial="hidden"
-      // variants={svgVariants}
-      // animate="visible"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 297 210"
@@ -74,7 +75,7 @@ export const WoodsyScene1 = () => {
           <stop offset={1} stopColor="#8a0" />
         </linearGradient>
         <linearGradient id="prefix__a">
-          <stop offset={0} stopColor="#afe" />
+          {/* <stop offset={0} stopColor="#afe" /> */}
           <stop offset={1} stopColor="#fff" />
         </linearGradient>
         <linearGradient
@@ -107,10 +108,16 @@ export const WoodsyScene1 = () => {
         /> */}
       </defs>
       <g paintOrder="fill markers stroke">
-        <motion.path        
+        <motion.path
           fill="url(#prefix__c)"
           d="M0 87h297v210H0z"
           transform="translate(0 -87)"
+
+          initial="hidden"
+          animate="visible"
+          variants={skyVariants}
+          transition={skyTransition}
+
         />
         <motion.path
           variants={pathVariants}
