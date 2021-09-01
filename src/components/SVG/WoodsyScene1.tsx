@@ -13,6 +13,7 @@ const skyVariants = {
 
 const skyTransition = {
   default: {
+    type: "tween",
     repeatDelay: 2.5,
     duration: 10,
     ease: "easeInOut",
@@ -42,6 +43,7 @@ const transition = {
     repeatType: "reverse"
   },
   pathLength: {
+    type: "tween",
     repeatDelay: 2,
     duration: 7.5,
     ease: "easeInOut",

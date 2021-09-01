@@ -12,10 +12,10 @@ const Home = () => {
         <div className="background-svg">
           <WoodsyScene1 />
         </div>
-        <div className="home-content-text">
-          HOME CONTENT test test
+        {/* <div className="home-content-text"> */}
+          {/* HOME CONTENT test test */}
           {/* <Improvisation /> */}
-        </div>
+        {/* </div> */}
       </div>
     </>
   )
