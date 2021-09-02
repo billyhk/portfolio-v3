@@ -66,14 +66,14 @@ const Home = () => {
 						<MyAvatar />
 					</motion.div>
 
-					<motion.div
+					{/* <motion.div
 						variants={titleVariants}
 						transition={titleTransition}
 						initial='hidden'
 						animate='visible'
 						className='title'>
 						<Improvisation />
-					</motion.div>
+					</motion.div> */}
 
 					{/* <motion.img
 						src={headshot}
