@@ -33,13 +33,13 @@ const Home = () => {
 		hidden: {
 			opacity: 0,
 			x: '100%',
-			background: 'rgba(255,255,255,.05)',
+			// background: 'rgba(255,255,255,.05)',
       // color: 'white',
 		},
 		visible: {
 			opacity: 0.9,
 			x: '0',
-			background: 'rgba(255,255,255, .2)',
+			// background: 'rgba(255,255,255, .2)',
       // color: 'black'
 			// background: [
 			// 	'#0055FF',
@@ -59,12 +59,12 @@ const Home = () => {
 		opacity: {
 			duration: 0.5,
 		},
-		background: {
-      delay: 1,
-			duration: 1,
-			repeat: Infinity,
-			repeatType: 'reverse',
-		},
+		// background: {
+    //   delay: 1,
+		// 	duration: 1,
+		// 	// repeat: Infinity,
+		// 	// repeatType: 'reverse',
+		// },
 	};
 
 	return (
