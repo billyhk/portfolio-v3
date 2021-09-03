@@ -80,7 +80,6 @@ const Home = () => {
 						initial='hidden'
 						animate='visible'
 						className='headshot'>
-						{/* <Improvisation /> */}
 						<MyAvatar />
 					</motion.div>
 

@@ -17,13 +17,14 @@ const App: React.FC<RouteComponentProps> = () => {
 
 	return (
 		<motion.div
-			className='site-container'
-			initial={{
-				opacity: 0,
-			}}
-			animate={{
-				opacity: 1,
-			}}>
+			// className='site-container'
+			// initial={{
+			// 	opacity: 0,
+			// }}
+			// animate={{
+			// 	opacity: 1,
+			// }}
+      >
 			{/* className="site-container" */}
 			{/* <MainNav /> */}
 			{/* <div className="App-Loader"></div> */}

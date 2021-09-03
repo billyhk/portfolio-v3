@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 export const myAvatar = (props: React.SVGProps<SVGSVGElement>) => (
 	<svg
 		xmlns='http://www.w3.org/2000/svg'
-		width={'100%'}
-		height={'75vh'}
+		width={'100%'} //corresponds with css
+		height={'500'} //corresponds with css
 		viewBox='0 0 200 200'
 		overflow='hidden'
 		{...props}>
