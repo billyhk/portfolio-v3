@@ -40,15 +40,15 @@
 		bottom: 0;
 		height: 500px;
 
-    // display: flex;
-    // place-items: center;
-    // width: auto;
+		// display: flex;
+		// place-items: center;
+		// width: auto;
 
 		svg {
 			// height: 500px;
 			// width: 100%;
 			width: auto;
-      // width: 100vw;
+			// width: 100vw;
 			// height: auto;
 		}
 	}
@@ -70,21 +70,22 @@
 
 @media (max-width: 950px) {
 	.home-content-text {
-
 		.title {
 			// mix-blend-mode: difference;
 			top: 0;
-      // right: 0;
-      // bottom: 0;
+			// right: 0;
+			// bottom: 0;
 			// left: 0;
-      width: 100vw;
-      // margin: 2%;
+			width: 100vw;
+			// margin: 2%;
       
 			div {
-        width: 100%;
-        place-items: center;
+        border-radius: 0;
+        
+				width: 100%;
+				place-items: center;
 
-        background-color: rgba(0, 0, 0, 0.5);
+				background-color: rgba(0, 0, 0, 0.5);
 				box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.2);
 
 				text-align: center;

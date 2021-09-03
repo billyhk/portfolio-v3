@@ -371,7 +371,7 @@ export const myAvatar = (props: React.SVGProps<SVGSVGElement>) => (
 				initial={{
 					rotate: '0deg',
 				}}
-				animate={{ rotate: '-7.5deg' }}
+				animate={{ rotate: '-20deg' }}
 				transition={{
 					default: {
             delay: 1,
