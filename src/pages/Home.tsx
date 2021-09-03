@@ -33,10 +33,22 @@ const Home = () => {
 		hidden: {
 			opacity: 0,
 			x: '100%',
+			background: 'rgba(255,255,255,.05)',
+      // color: 'white',
 		},
 		visible: {
-			opacity: 1,
+			opacity: 0.9,
 			x: '0',
+			background: 'rgba(255,255,255, .2)',
+      // color: 'black'
+			// background: [
+			// 	'#0055FF',
+			// 	'#FFF9DA',
+			// 	'#E7FFF7',
+			// 	'#FFC6A8',
+			// 	'#FF7744',
+			// 	'#F3F2F2',
+			// ],
 		},
 	};
 	const titleTransition = {
@@ -45,7 +57,13 @@ const Home = () => {
 			ease: 'easeIn',
 		},
 		opacity: {
+			duration: 0.5,
+		},
+		background: {
+      delay: 1,
 			duration: 1,
+			repeat: Infinity,
+			repeatType: 'reverse',
 		},
 	};
 
@@ -66,23 +84,16 @@ const Home = () => {
 						<MyAvatar />
 					</motion.div>
 
-					{/* <motion.div
-						variants={titleVariants}
-						transition={titleTransition}
-						initial='hidden'
-						animate='visible'
-						className='title'>
-						<Improvisation />
-					</motion.div> */}
-
-					{/* <motion.img
-						src={headshot}
-						variants={headshotVariants}
-						transition={headshotTransition}
-						initial='hidden'
-						animate='visible'
-						className='headshot'
-					/> */}
+					<div className='title'>
+						<motion.div
+							variants={titleVariants}
+							transition={titleTransition}
+							initial='hidden'
+							animate='visible'>
+							<h1>Hi,</h1>
+							<h2>I'm Billy</h2>
+						</motion.div>
+					</div>
 				</div>
 
 				{/* <div className="justify-between w-full">
