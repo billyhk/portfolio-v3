@@ -75,7 +75,11 @@ const Home = () => {
 			ease: 'easeIn',
 		},
 		x: {
-			duration: .5,
+			duration: 0.5,
+			ease: 'easeInOut',
+		},
+		scale: {
+			duration: 0.75,
 			ease: 'easeInOut',
 		},
 		// opacity: {
