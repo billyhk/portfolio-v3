@@ -13,12 +13,12 @@ const skyVariants = {
 
 const skyTransition = {
 	default: {
-		type: 'tween',
-		repeatDelay: 2.5,
-		duration: 10,
+    duration: 5,
 		ease: 'easeInOut',
-		repeat: Infinity,
-		repeatType: 'reverse',
+		// type: 'tween',
+		// repeatDelay: 2.5,
+		// repeat: Infinity,
+		// repeatType: 'reverse',
 	},
 };
 
@@ -26,12 +26,12 @@ const pathVariants = {
 	hidden: {
 		pathLength: 0,
 		scale: 1.5,
-		strokeWidth: 0.5,
+		// strokeWidth: 0.5,
 	},
 	visible: {
 		pathLength: 1,
 		scale: 1,
-		strokeWidth: 1.5,
+		// strokeWidth: 1.5,
 	},
 };
 
@@ -134,14 +134,14 @@ export const WoodsyScene1 = () => {
         /> */}
 			</defs>
 			<g paintOrder='fill markers stroke'>
-				<motion.path
-					fill='url(#prefix__c)'
+				<path
+					fill='#1CF' //'url(#prefix__c)'
 					d='M0 87h297v210H0z'
 					transform='translate(0 -87)'
-					initial='hidden'
-					animate='visible'
-					variants={skyVariants}
-					transition={skyTransition}
+					// initial='hidden'
+					// animate='visible'
+					// variants={skyVariants}
+					// transition={skyTransition}
 				/>
 				<motion.path
 					transition={transition}

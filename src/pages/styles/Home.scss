@@ -72,6 +72,7 @@
 	position: absolute;
 	top: 0vh;
 	left: 0vw;
+
 	// background: rgba(129, 207, 221, 0.76);
 	padding: 4% 4% 0 4%;
 	border-radius: 8px;
@@ -81,14 +82,12 @@
 	// background-color: #c45050;
 	// left: auto;
 	// right: auto;
-  svg {
-    path {
-      border:2px solid black;
-    }
-  }
+	// svg {
+	//   path {
+	//     border:2px solid black;
+	//   }
+	// }
 }
-
-
 
 @media (max-width: 950px) {
 	.home-content-text {
@@ -121,6 +120,15 @@
 	.home-content-text .title {
 		div {
 			box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	.signatureSVGContainer {
+		top: 10vh;
+		left: unset;
+		right: 20vw;
+		svg {
+			transform: scale(1.5);
 		}
 	}
 }
