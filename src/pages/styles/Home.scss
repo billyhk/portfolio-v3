@@ -70,17 +70,22 @@
 
 .signatureSVGContainer {
 	position: absolute;
-	top: 10vh;
-	right: 20vw;
-	background: rgba(129, 207, 221, 0.76);
+	top: 0vh;
+	left: 0vw;
+	// background: rgba(129, 207, 221, 0.76);
 	padding: 4% 4% 0 4%;
 	border-radius: 8px;
-	box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.2);
+	// box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.2);
 
 	// mix-blend-mode: difference;
 	// background-color: #c45050;
 	// left: auto;
 	// right: auto;
+  svg {
+    path {
+      border:2px solid black;
+    }
+  }
 }
 
 
