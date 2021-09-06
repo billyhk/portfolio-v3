@@ -39,7 +39,6 @@
 		// right: 0;
 		bottom: 0;
 		height: 500px;
-
 		// display: flex;
 		// place-items: center;
 		// width: auto;
@@ -88,18 +87,19 @@
 		path {
 			// filter: drop-shadow(1px 1px 0px #3e68ff) drop-shadow(-1px 1px 0px #3e68ff)
 			// 	drop-shadow(1px -1px 0px #3e68ff) drop-shadow(-1px -1px 0px #3e68ff);
-			filter: drop-shadow(1px 1px 0px rgba(14, 136, 206, .5)) drop-shadow(-1px 1px 0px rgba(22, 45, 255, .5))
-			drop-shadow(1px 1px 0px rgba(180, 227, 255, 0.5)) drop-shadow(-1px 1px 0px rgba(204, 209, 255, 0.5))
-
-    }
+			filter: drop-shadow(1px 1px 0px rgba(14, 136, 206, 0.5))
+				drop-shadow(-1px 1px 0px rgba(22, 45, 255, 0.5))
+				drop-shadow(1px 1px 0px rgba(180, 227, 255, 0.5))
+				drop-shadow(-1px 1px 0px rgba(204, 209, 255, 0.5));
+		}
 	}
 }
 
-@media(max-height: 500px) {
-  .headshot {
-      transform: translateY(25%) scale(.5) !important
-  }
-}
+// @media (max-height: 500px) {
+// 	.headshot {
+// 		transform: translateY(25%) scale(0.5) !important
+// 	}
+// }
 
 @media (max-width: 950px) {
 	.home-content-text {

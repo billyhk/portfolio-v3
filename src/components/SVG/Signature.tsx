@@ -20,7 +20,7 @@ const signatureVariants = {
 
 const signatureTransition = {
 	default: {
-		delay: 0.25,
+		delay: 0.15,
 		duration: 2.8,
 		ease: 'linear',
 	},
