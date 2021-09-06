@@ -82,11 +82,12 @@
 	// background-color: #c45050;
 	// left: auto;
 	// right: auto;
-	// svg {
-	//   path {
-	//     border:2px solid black;
-	//   }
-	// }
+	svg {
+		path {
+			filter: drop-shadow(1px 1px 0px #3e68ff) drop-shadow(-1px 1px 0px #3e68ff)
+				drop-shadow(1px -1px 0px #3e68ff) drop-shadow(-1px -1px 0px #3e68ff);
+		}
+	}
 }
 
 @media (max-width: 950px) {
