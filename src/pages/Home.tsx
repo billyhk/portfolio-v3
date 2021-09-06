@@ -6,6 +6,7 @@ import { Improvisation } from '../components/SVG/Improvisation';
 // import { Whalesback } from "../components/SVG/Whalesback";
 import { motion } from 'framer-motion';
 import { myAvatar as MyAvatar } from '../components/SVG/myAvatar';
+import { Signature } from '../components/SVG/Signature';
 
 const Home = () => {
 	const headshotVariants = {
@@ -34,13 +35,13 @@ const Home = () => {
 			opacity: 0,
 			x: '100%',
 			// background: 'rgba(255,255,255,.05)',
-      // color: 'white',
+			// color: 'white',
 		},
 		visible: {
 			opacity: 0.9,
 			x: '0',
 			// background: 'rgba(255,255,255, .2)',
-      // color: 'black'
+			// color: 'black'
 			// background: [
 			// 	'#0055FF',
 			// 	'#FFF9DA',
@@ -60,7 +61,7 @@ const Home = () => {
 			duration: 0.5,
 		},
 		// background: {
-    //   delay: 1,
+		//   delay: 1,
 		// 	duration: 1,
 		// 	// repeat: Infinity,
 		// 	// repeatType: 'reverse',
@@ -82,8 +83,15 @@ const Home = () => {
 						className='headshot'>
 						<MyAvatar />
 					</motion.div>
-
-					<div className='title'>
+					<motion.div
+						variants={titleVariants}
+						transition={titleTransition}
+						initial='hidden'
+						animate='visible'
+						className='signatureSVGContainer'>
+						<Signature />
+					</motion.div>
+					{/* <div className='title'>
 						<motion.div
 							variants={titleVariants}
 							transition={titleTransition}
@@ -92,7 +100,7 @@ const Home = () => {
 							<h1>Hi,</h1>
 							<h2>I'm Billy</h2>
 						</motion.div>
-					</div>
+					</div> */}
 				</div>
 
 				{/* <div className="justify-between w-full">
