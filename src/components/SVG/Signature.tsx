@@ -4,25 +4,32 @@ import { motion } from 'framer-motion';
 const signatureVariants = {
 	hidden: {
 		pathLength: 0,
-		strokeWidth: '2px',
-    stroke: 'white'
+		strokeWidth: '1px',
+		opacity: 0.1,
+		x: '-5%',
 	},
 	visible: {
 		pathLength: 1,
-		strokeWidth: '10px',
-    stroke: '#1eaacc',
+		strokeWidth: '8px',
+		stroke: 'white',
+		rotate: 0,
+		opacity: 1,
+		x: '0',
 	},
 };
 
 const signatureTransition = {
 	default: {
-		delay: .5,
+		delay: 0.25,
 		duration: 2.8,
 		ease: 'linear',
 	},
-	stroke: {
-		duration: 2.8,
+	strokeWidth: {
+		duration: 4,
 		ease: 'easeIn',
+	},
+	x: {
+		duration: 6,
 	},
 };
 

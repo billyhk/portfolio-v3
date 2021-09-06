@@ -83,10 +83,15 @@
 	// left: auto;
 	// right: auto;
 	svg {
+		border-radius: 1ch;
+
 		path {
-			filter: drop-shadow(1px 1px 0px #3e68ff) drop-shadow(-1px 1px 0px #3e68ff)
-				drop-shadow(1px -1px 0px #3e68ff) drop-shadow(-1px -1px 0px #3e68ff);
-		}
+			// filter: drop-shadow(1px 1px 0px #3e68ff) drop-shadow(-1px 1px 0px #3e68ff)
+			// 	drop-shadow(1px -1px 0px #3e68ff) drop-shadow(-1px -1px 0px #3e68ff);
+			filter: drop-shadow(1px 1px 0px rgba(14, 136, 206, .5)) drop-shadow(-1px 1px 0px rgba(22, 45, 255, .5))
+			drop-shadow(1px 1px 0px rgba(180, 227, 255, 0.5)) drop-shadow(-1px 1px 0px rgba(204, 209, 255, 0.5))
+
+    }
 	}
 }
 
