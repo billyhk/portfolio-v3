@@ -95,6 +95,12 @@
 	}
 }
 
+@media(max-height: 500px) {
+  .headshot {
+      transform: translateY(25%) scale(.5) !important
+  }
+}
+
 @media (max-width: 950px) {
 	.home-content-text {
 		.title {
