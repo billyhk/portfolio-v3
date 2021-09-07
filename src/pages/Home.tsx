@@ -96,6 +96,10 @@ const Home = () => {
 		visible: {
 			opacity: 0.9,
 			x: '0',
+			...(window.innerHeight < 500 && {
+        y: '-25%',
+				scale: 0.5,
+			}),
 		},
 	};
 	const titleTransition = {

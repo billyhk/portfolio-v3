@@ -9,14 +9,6 @@
 
 .background-svg {
 	position: absolute;
-	// width: 100vw;
-	// height: 100vh;
-	// background: pink;
-	// top: 0;
-	// left: 0;
-	// z-index: 0;
-	// border: 1px solid black;
-	// background-size: no-repeat center center fixed;
 	stroke: rgba(14, 52, 133, 0.315);
 	stroke-width: 0.5;
 	stroke-linejoin: round;
@@ -26,8 +18,6 @@
 .home-content-text {
 	position: relative;
 	display: flex;
-	// justify-content: space-between;
-	// place-items: center;
 	height: 100vh;
 
 	div {
@@ -36,19 +26,11 @@
 
 	.headshot {
 		left: 0;
-		// right: 0;
 		bottom: 0;
 		height: 500px;
-		// display: flex;
-		// place-items: center;
-		// width: auto;
 
 		svg {
-			// height: 500px;
-			// width: 100%;
 			width: auto;
-			// width: 100vw;
-			// height: auto;
 		}
 	}
 
@@ -72,21 +54,13 @@
 	top: 0vh;
 	left: 0vw;
 
-	// background: rgba(129, 207, 221, 0.76);
 	padding: 4% 4% 0 4%;
 	border-radius: 8px;
-	// box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.2);
 
-	// mix-blend-mode: difference;
-	// background-color: #c45050;
-	// left: auto;
-	// right: auto;
-	svg {
+ svg {
 		border-radius: 1ch;
 
 		path {
-			// filter: drop-shadow(1px 1px 0px #3e68ff) drop-shadow(-1px 1px 0px #3e68ff)
-			// 	drop-shadow(1px -1px 0px #3e68ff) drop-shadow(-1px -1px 0px #3e68ff);
 			filter: drop-shadow(1px 1px 0px rgba(14, 136, 206, 0.5))
 				drop-shadow(-1px 1px 0px rgba(22, 45, 255, 0.5))
 				drop-shadow(1px 1px 0px rgba(180, 227, 255, 0.5))
@@ -95,22 +69,11 @@
 	}
 }
 
-// @media (max-height: 500px) {
-// 	.headshot {
-// 		transform: translateY(25%) scale(0.5) !important
-// 	}
-// }
-
 @media (max-width: 950px) {
 	.home-content-text {
 		.title {
-			// mix-blend-mode: difference;
 			top: 0;
-			// right: 0;
-			// bottom: 0;
-			// left: 0;
 			width: 100vw;
-			// margin: 2%;
 
 			div {
 				border-radius: 0;
