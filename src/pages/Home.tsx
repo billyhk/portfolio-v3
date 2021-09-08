@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { myAvatar as MyAvatar } from '../components/SVG/myAvatar';
 import { Signature } from '../components/SVG/Signature';
 import { useEffect, useState } from 'react';
+import TitleSubtitle from '../components/TextContent/Title';
 
 interface AnimationVariant {
 	hidden: {
@@ -20,13 +21,13 @@ interface AnimationVariant {
 }
 
 const Home = () => {
-	const [height, setHeight] = useState(window.innerHeight);
+	const [height, setHeight] = useState<number>(window.innerHeight);
+	const [width, setWidth] = useState<number>(window.innerWidth);
 
 	useEffect(() => {
 		const updateWindowDimensions = () => {
-			const newHeight = window.innerHeight;
-			setHeight(newHeight);
-			console.log('updating height');
+			setHeight(window.innerHeight);
+			setWidth(window.innerWidth);
 		};
 
 		window.addEventListener('resize', updateWindowDimensions);
@@ -34,47 +35,34 @@ const Home = () => {
 		return () => window.removeEventListener('resize', updateWindowDimensions);
 	}, []);
 
-	// useEffect(() => {
-	// 	setHeadshotVariants({
-	// 		hidden: {
-	// 			opacity: 0,
-	// 			x: '-100%',
-	// 		},
-	// 		visible: {
-	// 			opacity: 1,
-	// 			x: '0',
-	// 			...(height < 500
-	// 				? {
-	// 						y: '25%',
-	// 						scale: 0.5,
-	// 				  }
-	// 				: {
-	// 						y: '0',
-	// 						scale: 1,
-	// 				  }),
-	// 		},
-	// 	});
-	// }, [height]);
-
 	const headshotVariants = {
 		hidden: {
-			x: '-100%',
+			x: '-150%',
 		},
 		visible: {
 			x: '0',
-			...(window.innerHeight < 500 && {
+			...(width < 600 &&
+				height < 1000 && {
+					x: '-20%',
+				}),
+			...(height < 500 && {
 				y: '25%',
 				scale: 0.5,
 			}),
+			...(height > 1000 && {
+				y: '-50%',
+				x: '20%',
+				scale: 2,
+			}),
 		},
 	};
-
 	const headshotTransition = {
 		default: {
 			duration: 0.25,
 			ease: 'easeIn',
 		},
 		x: {
+			delay: 2.5,
 			duration: 0.5,
 			ease: 'easeInOut',
 		},
@@ -82,33 +70,24 @@ const Home = () => {
 			duration: 0.75,
 			ease: 'easeInOut',
 		},
-		// opacity: {
-		//   duration: 1,
-		// }
 	};
 
 	const titleVariants = {
 		hidden: {
-			opacity: 0,
-			x: '100%',
-			color: 'white',
+			y: '-300%',
+			x: '0%',
 		},
 		visible: {
-			opacity: 0.9,
 			x: '0',
-			...(window.innerHeight < 500 && {
-        y: '-25%',
-				scale: 0.5,
-			}),
+			y: '0',
 		},
 	};
 	const titleTransition = {
 		default: {
-			duration: 0.25,
-			ease: 'easeIn',
-		},
-		opacity: {
+			delay: 0.25,
 			duration: 0.5,
+			type: 'spring',
+			stiffness: 75,
 		},
 	};
 
@@ -118,7 +97,7 @@ const Home = () => {
 				<div className='background-svg'>
 					<WoodsyScene2 />
 				</div>
-				<div className='home-content-text'>
+				<div className='home-content-elements'>
 					<motion.div
 						variants={headshotVariants}
 						transition={headshotTransition}
@@ -127,14 +106,18 @@ const Home = () => {
 						className='headshot'>
 						<MyAvatar />
 					</motion.div>
-					<motion.div
-						variants={titleVariants}
-						transition={titleTransition}
-						initial='hidden'
-						animate='visible'
-						className='signatureSVGContainer'>
+					<div className='signatureSVGContainer'>
 						<Signature />
-					</motion.div>
+					</div>
+					<div className='home-content-text'>
+						<motion.div
+							variants={titleVariants}
+							transition={titleTransition}
+							initial='hidden'
+							animate='visible'>
+							<TitleSubtitle title='billy kaufman frontend developer' />
+						</motion.div>
+					</div>
 				</div>
 			</div>
 		</>

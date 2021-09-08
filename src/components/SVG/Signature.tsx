@@ -5,7 +5,6 @@ const signatureVariants = {
 	hidden: {
 		pathLength: 0,
 		strokeWidth: '1px',
-		opacity: 0.1,
 		x: '-5%',
 	},
 	visible: {
@@ -13,14 +12,13 @@ const signatureVariants = {
 		strokeWidth: '8px',
 		stroke: 'white',
 		rotate: 0,
-		opacity: 1,
 		x: '0',
 	},
 };
 
 const signatureTransition = {
 	default: {
-		delay: 0.15,
+		delay: 3.5,
 		duration: 2.8,
 		ease: 'linear',
 	},
