@@ -12,7 +12,7 @@ const TitleSubtitle: FC<Props> = ({ title }) => {
 			opacity: 1,
 			transition: {
         // duration: 0.5,
-        delay: 1,
+        // delay: 1,
 				staggerChildren: .075,
 			},
 		},
@@ -20,7 +20,7 @@ const TitleSubtitle: FC<Props> = ({ title }) => {
 
 	const letter = {
 		hidden: {
-			color: 'rgba(0,0,0,1)',
+			color: 'rgba(255,255,255,1)',
 		},
 		visible: {
 			color: '#ff5a83',

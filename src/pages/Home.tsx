@@ -84,7 +84,7 @@ const Home = () => {
 	};
 	const titleTransition = {
 		default: {
-			delay: 0.25,
+			// delay: 0.125,
 			duration: 0.5,
 			type: 'spring',
 			stiffness: 75,
