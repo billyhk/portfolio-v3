@@ -13,7 +13,7 @@ const initialState: ApplicationState = {
   links: [
     {
       id: "home",
-      to: "/",
+      to: "/home",
       name: "Home",
       showInNav: true,
       component: () => <Home />,

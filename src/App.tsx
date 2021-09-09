@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import { RouteComponentProps, Switch, withRouter } from 'react-router-dom';
+import { Redirect, Route, RouteComponentProps, Switch, withRouter } from 'react-router-dom';
 import { useScrollToTopOnNav } from './hooks/useScrolltoTopOnNav';
 import { useApplicationContext } from './state/contexts/ApplicationContext';
 import { ILink } from './interfaces/link';
@@ -17,18 +17,20 @@ const App: React.FC<RouteComponentProps> = () => {
 
 	return (
 		<motion.div
-			// className='site-container'
-			// initial={{
-			// 	opacity: 0,
-			// }}
-			// animate={{
-			// 	opacity: 1,
-			// }}
-      >
+		// className='site-container'
+		// initial={{
+		// 	opacity: 0,
+		// }}
+		// animate={{
+		// 	opacity: 1,
+		// }}
+		>
 			{/* className="site-container" */}
 			<MainNav />
-			<div className="App-Loader"></div>
+			<div className='App-Loader'></div>
 			<Switch>
+				<Route exact path='/' render={() => <Redirect to={'/home'} />} />
+
 				{links.map((l: ILink) => {
 					return (
 						<RouteHandler

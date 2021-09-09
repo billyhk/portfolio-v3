@@ -11,16 +11,8 @@ import { Signature } from '../components/SVG/Signature';
 import { useEffect, useState } from 'react';
 import TitleSubtitle from '../components/TextContent/Title';
 
-interface AnimationVariant {
-	hidden: {
-		[key: string]: string | number;
-	};
-	visible: {
-		[key: string]: string | number;
-	};
-}
-
 const Home = () => {
+
 	const [height, setHeight] = useState<number>(window.innerHeight);
 	const [width, setWidth] = useState<number>(window.innerWidth);
 

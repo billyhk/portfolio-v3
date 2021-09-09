@@ -9,7 +9,7 @@ const signatureVariants = {
 	},
 	visible: {
 		pathLength: 1,
-		strokeWidth: '8px',
+		strokeWidth: '10px',
 		stroke: 'white',
 		rotate: 0,
 		x: '0',
